@@ -27,7 +27,24 @@ function onClick(element) {
     })
 }
 
-function onSubmitClick(element, path) {
+function onSubmitClick(element, path, data) {
+    if (data.underLimit){
+        return setBackground(element, path);
+    }
+    let originalRatio = element.offsetWidth / element.offsetHeight;
+    modal.imageCrop({
+        path,
+        aspect: originalRatio,
+        x: 0,
+        y: 0,
+        width: 100,
+        height: 100,
+        onCrop: setBackground.bind(this, element, path)
+    });
+}
+
+function setBackground(element, path){
+    console.log(2);
     let correctPath = path.replace(/['|"]/g, ``);
     novi.element.setInlineStyle(element, "backgroundImage", `url(${correctPath})`);
     element.style.backgroundImage = `url(${correctPath})`;
