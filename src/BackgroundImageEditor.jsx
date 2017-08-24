@@ -1,5 +1,6 @@
 const React = novi.react.React;
 const Icons = novi.ui.icons;
+const Types = novi.types;
 
 const EditorItem = {
     trigger: Icons.ICON_BG_IMAGE,
@@ -14,7 +15,7 @@ export default EditorItem;
 
 function onClick(element) {
     let ratio = element.offsetWidth / element.offsetHeight;
-    novi.media.choose({onSubmit: onSubmitCrop.bind(this,element), ratio})
+    novi.media.choose({onSubmit: onSubmitCrop.bind(this,element), ratio, type: Types.mediaImage})
 }
 
 function onSubmitCrop(element, path){
