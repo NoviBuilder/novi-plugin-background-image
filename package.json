@@ -1,6 +1,6 @@
 {
   "name": "@novi_dev/novi-plugin-background-image",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Novi background image plugin",
   "main": "dist/novi-plugin-background-image.js",
   "repository": {

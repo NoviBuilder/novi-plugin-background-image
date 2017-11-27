@@ -12,7 +12,8 @@ const Plugin = {
         novi: "0.8.4"
     },
     defaults: {
-        querySelector: '[class*="custom-bg-image"]'
+        querySelector: '[class*="custom-bg-image"]',
+        childQuerySelector: '[class*="custom-bg-image-image"]'
     },
     ui: {
         editor: [BackgroundImageEditor],

@@ -1,12 +1,15 @@
 const React = novi.react.React;
 const Icons = novi.ui.icons;
 const Types = novi.types;
-
+const Language = novi.language;
+const messages = Language.getDataByKey("novi-plugin-background-image");
 const EditorItem = {
     trigger: Icons.ICON_BG_IMAGE,
-    tooltip: "Replace Image",
     closeIcon: "submit",
-    title: "Replace Image",
+    // title: "Replace Image",
+    // tooltip: "Replace Image",
+    title: messages.editor.title,
+    tooltip: messages.editor.tooltip,
     onTriggerClick: onClick
 };
 
