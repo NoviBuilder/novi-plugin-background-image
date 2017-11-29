@@ -6,8 +6,6 @@ const messages = Language.getDataByKey("novi-plugin-background-image");
 const EditorItem = {
     trigger: Icons.ICON_BG_IMAGE,
     closeIcon: "submit",
-    // title: "Replace Image",
-    // tooltip: "Replace Image",
     title: messages.editor.title,
     tooltip: messages.editor.tooltip,
     onTriggerClick: onClick

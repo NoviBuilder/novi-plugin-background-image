@@ -2,14 +2,14 @@ const React = novi.react.React;
 import * as ExcerptFunction from "./ExcerptFunction";
 import BackgroundImageEditor from "./BackgroundImageEditor";
 import BackgroundImageSettings from "./BackgroundImageSettings";
-
+const Language = novi.language;
 const Plugin = {
     name: "novi-plugin-background-image",
     title: "Novi Background Image",
     description: "Novi Background Image description",
-    version: "1.0.8",
+    version: "1.0.9",
     dependencies: {
-        novi: "0.8.4"
+        novi: "0.8.6"
     },
     defaults: {
         querySelector: '[class*="custom-bg-image"]',
@@ -19,7 +19,16 @@ const Plugin = {
         editor: [BackgroundImageEditor],
         settings: <BackgroundImageSettings />,
     },
-    excerpt : ExcerptFunction.validBgImage
+    excerpt : ExcerptFunction.validBgImage,
+    onLanguageChange: onLanguageChange
 };
+
+
+function onLanguageChange(plugin){
+    const messages = Language.getDataByKey("novi-plugin-background-image");
+    plugin.ui.editor[0].title = messages.editor.title;
+    plugin.ui.editor[0].tooltip = messages.editor.tooltip;
+    return plugin;
+}
 
 novi.plugins.register(Plugin);
