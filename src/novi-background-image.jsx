@@ -7,9 +7,9 @@ const Plugin = {
     name: "novi-plugin-background-image",
     title: "Novi Background Image",
     description: "Novi Background Image description",
-    version: "1.0.9",
+    version: "1.0.10",
     dependencies: {
-        novi: "0.8.6"
+        novi: "0.9.0"
     },
     defaults: {
         querySelector: '[class*="custom-bg-image"]',

@@ -15,8 +15,7 @@ export default EditorItem;
 
 
 function onClick(element) {
-    let ratio = element.offsetWidth / element.offsetHeight;
-    novi.media.choose({onSubmit: onSubmitCrop.bind(this,element), ratio, type: Types.mediaImage})
+    novi.media.choose({onSubmit: onSubmitCrop.bind(this,element), width: element.offsetWidth, height: element.offsetHeight, type: Types.mediaImage})
 }
 
 function onSubmitCrop(element, path){
