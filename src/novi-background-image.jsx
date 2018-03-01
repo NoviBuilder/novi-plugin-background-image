@@ -7,7 +7,7 @@ const Plugin = {
     name: "novi-plugin-background-image",
     title: "Novi Background Image",
     description: "Novi Background Image description",
-    version: "1.0.10",
+    version: "1.1.0",
     dependencies: {
         novi: "0.9.0"
     },
